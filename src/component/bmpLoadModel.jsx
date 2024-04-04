@@ -1,7 +1,7 @@
 import { useGLTF } from '@react-three/drei';
 
 const BmpLoadModel = (props) => {
-  const { nodes, materials } = useGLTF('models/uploads_files_3839708_Modification.glb')
+  const { nodes, materials } = useGLTF('models/uploads_files_3839708_Modification.glb');
   return (
     <group {...props} dispose={null}>
       <group position={[0, 0.597, -0.306]}>
@@ -46,14 +46,14 @@ const BmpLoadModel = (props) => {
         position={[0.447, 0.282, 0.701]}
         rotation={[0, 0, -Math.PI / 2]}
       />
-      <mesh
-        castShadow
-        receiveShadow
-        geometry={nodes.caterpillar.geometry}
-        material={materials.Metal028_}
-        position={[0.445, 0.017, 0.605]}
-        rotation={[0, 0, -Math.PI / 2]}
-      />
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.caterpillar.geometry}
+          material={materials.Metal028_}
+          position={[0.445, 0.017, 0.605]}
+          rotation={[0, 0, -Math.PI / 2]}
+        />
       <mesh
         castShadow
         receiveShadow

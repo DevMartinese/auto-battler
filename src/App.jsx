@@ -1,6 +1,6 @@
 import { Environment, OrbitControls, PivotControls } from "@react-three/drei"
 import { Canvas } from "@react-three/fiber";
-import BmpLoadModel from "./component/bmpLoadModel";
+import { BMP } from "./component/BMP/BMP";
 import { TMLoadModel } from "./component/tmLoadModel";
 
 function App() {
@@ -20,11 +20,12 @@ function App() {
         <ambientLight 
           intensity={0.5} 
         />
-
-        <BmpLoadModel 
+        
+        <BMP 
           position-y={-1} 
           position-z={-5} 
         />
+
         <TMLoadModel 
           position-y={-1} 
           position-z={7} 
@@ -32,9 +33,14 @@ function App() {
           rotation-y={2} 
         />
 
-        <mesh position-y={-1} rotation-x={-Math.PI * 0.5} scale={2} receiveShadow>
+        <mesh 
+          position-y={-1} 
+          rotation-x={-Math.PI * 0.5} 
+          scale={2} 
+          receiveShadow
+        >
           <planeGeometry args={[10, 10]} />
-          <meshPhysicalMaterial color="white" />
+          <meshPhysicalMaterial color="#ccc" />
         </mesh>
 
         <Environment preset="sunset" />
