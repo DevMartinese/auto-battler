@@ -30,12 +30,13 @@ function App() {
             />
           </Debug>
 
-          {/* <TMLoadModel
+          <TMLoadModel
             position-y={-1}
             position-z={7}
             position-x={-1.7}
             rotation-y={2}
-          /> */}
+          />
+
           <Plane
             rotation={[-Math.PI / 2, 0, 0]}
             position={[0, -1, 0]} />
