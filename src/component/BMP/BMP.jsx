@@ -1,20 +1,20 @@
 import {
-  useEffect,
-  useRef
-} from 'react';
-import {
-  useRaycastVehicle,
-  useBox
+  Physics
 } from '@react-three/cannon';
-import { useFrame } from '@react-three/fiber';
-import { Chassis } from "./Chassis";
-import { Wheel } from "./Wheel";
+import { 
+  Chassis 
+} from "./Chassis";
+import { 
+  Wheels 
+} from "./Wheel";
 
 export const BMP = (props) => {
   return (
     <group {...props}>
-      <Chassis />
-      <Wheel />
+      <Physics>
+        <Chassis />
+        <Wheels />
+      </Physics>
     </group>
   );
 }
