@@ -8,7 +8,7 @@ import {
 export const BMP = (props) => {
   return (
     <group {...props}>
-      <Chassis />
+      {/* <Chassis /> */}
       <Wheels />
     </group>
   );
