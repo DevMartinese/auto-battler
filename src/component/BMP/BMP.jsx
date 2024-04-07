@@ -3,12 +3,12 @@ import {
 } from "./Chassis";
 import {
   Wheels
-} from "./Wheel";
+} from "./Wheels";
 
 export const BMP = (props) => {
   return (
     <group {...props}>
-      {/* <Chassis /> */}
+      <Chassis />
       <Wheels />
     </group>
   );
