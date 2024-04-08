@@ -7,8 +7,8 @@ export const Wheels = () => {
   return (
     <group>
       <Wheel1 />
-      <Wheel2 />
-      <Caterpillar />
+      {/* <Wheel2 />
+      <Caterpillar /> */}
     </group>
   )
 }

@@ -14,21 +14,17 @@ export const Experience = () => {
       <ambientLight
         intensity={0.5}
       />
-
       <BMP
         position-y={-1}
         position-z={-5}
       />
-
       {/* <TMLoadModel
           position-y={-1}
           position-z={7}
           position-x={-1.7}
           rotation-y={2}
         /> */}
-
       <Plane />
-
       <Environment preset="sunset" />
     </>
   )
