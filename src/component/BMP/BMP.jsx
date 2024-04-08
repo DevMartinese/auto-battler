@@ -1,9 +1,5 @@
-import {
-  Chassis
-} from "./Chassis";
-import {
-  Wheels
-} from "./Wheels";
+import { Chassis } from "./Chassis";
+import { Wheels } from "./Wheels";
 
 export const BMP = (props) => {
   return (
