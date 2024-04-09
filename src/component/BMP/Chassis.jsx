@@ -4,7 +4,6 @@ export const Chassis = () => {
   const { nodes, materials } = useGLTF('models/uploads_files_3839708_Modification.glb');
 
   return (
-    <mesh dispose={null}>
       <group position={[0, 0.597, -0.306]}>
         <mesh
           castShadow
@@ -31,7 +30,6 @@ export const Chassis = () => {
           material={materials.Metal028_}
         />
       </group>
-    </mesh>
   )
 }
 
