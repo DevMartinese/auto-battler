@@ -7,26 +7,34 @@ import { Caterpillar } from "./Caterpillar"
 
 export const Wheels = () => {
   const wheel1Position = [0.449, 0.124, 0.437];
+  const caterpillarPosition = [0.445, 0.017, 0.605]
 
-  const wheel1Ref = useRef();
+  const groupRef = useRef();
 
-  // Rotar la rueda en cada cuadro
   useFrame(() => {
-    if (wheel1Ref.current) {
-      wheel1Ref.current.position.z += 0.01; // Ajusta este valor para controlar la velocidad de rotación
+    if (groupRef.current) {
+      groupRef.current.position.z += 0.01;  // Move the whole group forward along Z-axis
     }
   });
 
   return (
-    <group>
+    <group ref={groupRef}>
       <RigidBody
         colliders="trimesh"
         position={wheel1Position}
+        allowSleep={false}
       >
-        <Wheel1 wheel1Ref={wheel1Ref} />
+        <Wheel1 />
       </RigidBody>
-      {/* <Wheel2 />
-      <Caterpillar /> */}
+      
+      <RigidBody 
+        colliders="trimesh" 
+        position={caterpillarPosition}
+        allowSleep={false}
+      >
+      <Caterpillar />
+      </RigidBody>
+      {/* <Wheel2 /> */}
     </group>
   )
 }
