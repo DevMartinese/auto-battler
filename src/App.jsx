@@ -9,11 +9,9 @@ function App() {
       camera={{ position: [0, 11, 11] }}
       shadows
     >
-      <Suspense>
         <Physics gravity={[0, -9.81, 0]} debug>
           <Experience />
         </Physics>
-      </Suspense>
     </Canvas>
   )
 }

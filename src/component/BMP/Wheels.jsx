@@ -14,6 +14,10 @@ export const Wheels = () => {
   useFrame(() => {
     if (groupRef.current) {
       groupRef.current.position.z += 0.01;  // Move the whole group forward along Z-axis
+
+      // if (groupRef.current.position.z > 5) {  // Ajusta según el tamaño de tu plano
+      //   groupRef.current.position.y -= 0.05;  // Mueve hacia abajo para simular caída
+      // }
     }
   });
 
@@ -22,17 +26,17 @@ export const Wheels = () => {
       <RigidBody
         colliders="trimesh"
         position={wheel1Position}
-        allowSleep={false}
+        type='dynamic'
       >
         <Wheel1 />
       </RigidBody>
-      
-      <RigidBody 
-        colliders="trimesh" 
+
+      <RigidBody
+        colliders="trimesh"
         position={caterpillarPosition}
-        allowSleep={false}
+        type='dynamic'
       >
-      <Caterpillar />
+        <Caterpillar />
       </RigidBody>
       {/* <Wheel2 /> */}
     </group>
